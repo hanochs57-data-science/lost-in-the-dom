@@ -1,0 +1,69 @@
+//App.jsx
+import Jobs from './pages/Jobs.jsx';
+import Profile from './pages/Profile.jsx';
+import Dashboard from './pages/Dashboard.jsx';
+import Statistics from './pages/Statistics.jsx';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+function App() {
+  return (
+    <>
+    <Router>
+          <h1>React App</h1>
+          <p>Welcome to the React App.</p>
+          <nav>
+            <Link to="/Dashboard">Dashboard</Link><br />
+            <Link to="/Profile">Profile</Link><br />
+            <Link to="/Jobs">Jobs</Link><br />
+            <Link to="/Statistics">Statistics</Link>
+          </nav>
+          <p>HANOCH SHETTY T043</p>
+        <Routes>
+          <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Jobs" element={<Jobs />} />
+          <Route path="/Statistics" element={<Statistics />} />
+        </Routes>
+     </Router>
+    </>
+  )
+}
+
+export default App;
+
+//Profile.jsx
+function Profile(){
+    return (
+        <>
+        <h1>Student Profile</h1>
+        <hr />
+        <p>Name: HANOCH SHETTY</p>
+        <p>Roll No: T043</p>
+        </>
+    )
+}
+
+export default Profile;
+
+//Jobs.jsx
+function Jobs(){
+    return (
+        <>
+        <h1>Job Information</h1>
+        <p>Position: ML ENGINEER</p>
+        <p>Salary: ₹50 LPA</p>
+        <p>Type: Part Time</p>
+        </>
+    )
+}
+export default Jobs;
+
+//Home.jsx
+function Home(){
+    return(
+        <>
+            <h1>Home Page</h1>
+            <p>Welcome to Home page</p>
+        </>
+    )
+}
+export default Home;
